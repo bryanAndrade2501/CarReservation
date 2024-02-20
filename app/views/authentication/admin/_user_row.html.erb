@@ -1,0 +1,16 @@
+<% if user_row.admin %>
+  <tr class="bg-red-100"> 
+<% else %>
+  <tr>
+<% end %>
+    <td class="py-2 px-4 border-b"><%= user_row.id %></td>
+    <td class="py-2 px-4 border-b"><%= user_row.name %></td>
+    <td class="py-2 px-4 border-b"><%= user_row.username %></td>
+    <td class="py-2 px-4 border-b"><%= user_row.email %></td>
+    <td class="py-2 px-4 border-b">
+    <button
+    class="border border-zinc-800 text-black py-1 px-2 rounded-full font-bold hover:text-white hover:bg-red-600  hover:border-red-600"
+    onclick="mostrarVentanaConfirmacion()">Permisos</button>
+    </td>
+</tr>
+

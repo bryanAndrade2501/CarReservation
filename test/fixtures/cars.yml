@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+carone:
+  modelo: Picanto
+  marca: Kia
+  transmision: Manual
+  anio: 2018
+  capacidad: 4
+  preciodiario: 1.5
+  type: one
+
+cartwo:
+  modelo: SZ
+  marca: Chevrolet
+  transmision: Manual
+  anio: 2018
+  capacidad: 5
+  preciodiario: 1.5
+  type: two

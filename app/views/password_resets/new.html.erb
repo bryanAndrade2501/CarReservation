@@ -1,0 +1,17 @@
+<div class="items-center flex justify-center content-center h-max w-full mt-64">
+  <%= form_with url: password_reset_path, class: "bg-white p-8 rounded-lg shadow-md w-full max-w-md flex flex-col" do |form| %>
+
+    
+    <h2 class="text-2xl font-semibold mb-4">¿Tienes problemas para iniciar sesión?</h2>
+    <h3 class="font-light mb-4">Ingresa tu correo electrónico para continuar</h3>
+
+
+    <div class="mb-4">
+      
+      <%= form.email_field :email, class: "mt-1 p-2 w-full border rounded-md font-light focus:outline-none focus:shadow-outline", placeholder: "Correo electrónico" %>
+    </div>
+    <div class="flex items-center justify-between">
+      <%= form.submit "Enviar", class: "bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800" %>
+    </div>
+  <% end %>
+</div>

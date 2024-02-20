@@ -1,0 +1,44 @@
+<%= form_with model: @car do |form| %>
+
+  <% @car.errors.full_messages.each do |error| %>
+    <div><%= error %></div>
+  <% end %>
+
+  <div>
+    <%= form.label :marca %>
+    <%= form.text_field :marca %>
+  </div>
+  <div>
+    <%= form.label :modelo %>
+    <%= form.text_field :modelo %>
+  </div>
+
+  <div>
+    <%= form.label :type %>
+    <%= form.collection_select :type_id, Type.all.order(name: :asc), :id, :name %>
+  </div>
+
+  <div>
+    <%= form.label :transmision %>
+    <%= form.select :transmision, ['Automática', 'Manual'] %>
+  </div>
+  <div>
+    <%= form.label :anio %>
+    <%= form.number_field :anio %>
+  </div>
+  <div>
+    <%= form.label :capacidad %>
+    <%= form.number_field :capacidad %>
+  </div>
+  <div>
+    <%= form.label :preciodiario %>
+    <%= form.number_field :preciodiario, step: '0.01' %>
+  </div>
+
+  <div>
+    <%= form.label :images %>
+    <%= form.file_field :images, multiple: true %>
+  </div>
+
+  <%= form.submit "Guardar" %>
+<% end %>

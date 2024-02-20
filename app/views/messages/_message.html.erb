@@ -1,0 +1,4 @@
+<div class="<%= message.user == Current.user ? 'text-right bg-blue-200' : 'text-left bg-gray-100' %> p-2 rounded-lg">
+  <h6><%= message.user.email %></h6>
+  <p><%= message.body %></p>
+</div>

@@ -1,0 +1,47 @@
+<% if Current.user && Current.user.admin? %>
+  <div class="text-black text-center pt-20 items-center justify-center  flex-col w-full">
+    <h1 class="text-4xl font-bold mb-5">Todas las reservas</h1>
+    <table class="min-w-full bg-white border border-gray-300">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="py-2 px-4 border-b">ID del Auto</th>
+          <th class="py-2 px-4 border-b">ID de Usuario</th>
+          <th class="py-2 px-4 border-b">Nombre del Reservante</th>
+          <th class="py-2 px-4 border-b">Fecha de Inicio</th>
+          <th class="py-2 px-4 border-b">Fecha Final</th>
+          <th class="py-2 px-4 border-b">Precio Total</th>
+          <% if Current.user&.admin %>
+          <th class="py-2 px-4 border-b">Acciones</th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: 'reservation_row', collection: @reservations %>
+      </tbody>
+    </table>
+  </div>
+<% end %>
+
+  <div class="text-black text-center pt-20 items-center justify-center  flex-col w-full">
+    <h1 class="text-4xl font-bold mb-5">Mis reservas</h1>
+
+    <table class="min-w-full bg-white border border-gray-300">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="py-2 px-4 border-b">ID del Auto</th>
+          <th class="py-2 px-4 border-b">ID de Usuario</th>
+          <th class="py-2 px-4 border-b">Nombre del Reservante</th>
+          <th class="py-2 px-4 border-b">Fecha de Inicio</th>
+          <th class="py-2 px-4 border-b">Fecha Final</th>
+          <th class="py-2 px-4 border-b">Precio Total</th>
+          <% if Current.user&.admin %>
+          <th class="py-2 px-4 border-b">Acciones</th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: 'reservation_row', collection: @user_reservations %>
+      </tbody>
+    </table>
+  </div>
+

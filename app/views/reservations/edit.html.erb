@@ -1,0 +1,19 @@
+<h1>Editar reserva</h1>
+
+<p>Nueva reserva para <%= Current.user.name %></p>
+
+<section class='flex w-full flex-row justify-center item-center'>
+    <div class='basis-1/2 flex justify-center items-center p-2'>
+        <% @reservation.car.images.each do |car_image| %>
+        <%= image_tag(car_image, class:'w-1/2') %>
+        <% end %>
+    </div>
+    <div class='basis-1/2 flex justify-center items-center'>
+        <%= render 'reservations/edit_forn' %>
+    </div>
+
+</section>
+
+
+
+

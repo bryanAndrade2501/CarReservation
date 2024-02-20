@@ -1,0 +1,8 @@
+<%= form_with url: cars_path, method: :get, class: "bg-white shadow-md rounded px-2 py-2 mb-4" do |form| %>
+  <h3 class="text-lg font-semibold mb-2">Filtrar por</h3>
+  <h3 class="text-base mb-1">Precio</h3>
+  <div class="flex items-center">
+    <%= form.number_field :min_price, placeholder: t('.min_value'), onChange: 'this.form.requestSubmit()', value: params[:min_price], class: "appearance-none border rounded py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-1 w-1/2" %>
+    <%= form.number_field :max_price, placeholder: t('.max_value'), onChange: 'this.form.requestSubmit()', value: params[:max_price], class: "appearance-none border rounded py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-1/2" %>
+  </div>
+<% end %>

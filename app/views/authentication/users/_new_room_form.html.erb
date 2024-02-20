@@ -1,0 +1,4 @@
+<%= form_with(model: @room, remote: true, class:"bg-gray-100 p-3 rounded-lg") do |form| %>
+    <%= form.text_field :name, class: 'border-gray-300 rounded-md p-2 w-full', autocomplete: 'off' %>
+    <%= form.submit 'Crear', class: 'bg-gray-900 text-white px-4 py-2 rounded-md mt-2' %>
+<% end %>

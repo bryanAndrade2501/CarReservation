@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  car: one
+  pickup_date: 2023-12-31
+  return_date: 2023-12-31
+  total_price: 1.5
+  status: MyString
+
+two:
+  user: two
+  car: two
+  pickup_date: 2023-12-31
+  return_date: 2023-12-31
+  total_price: 1.5
+  status: MyString

@@ -1,0 +1,16 @@
+<div class="bg-white shadow-md rounded px-2 py-2 mb-4">
+  <h3 class="text-lg font-semibold mb-2"><%= t('.order') %></h3>
+  <%= form_with url: cars_path, method: :get do |form| %>
+    <div class="mb-2">
+      <h3 class="text-base mb-1"><%= t('.price') %></h3>
+      <div class="flex items-center mb-1">
+        <%= form.label :filter_price_min, t('.descendente'), class: "mr-1" %>
+        <%= form.radio_button :filter_price_min, 'true', onchange: 'this.form.submit()', class: "form-radio h-3 w-3 text-black border-gray-300" %>
+      </div>
+      <div class="flex items-center">
+        <%= form.label :filter_price_max, t('.ascendente'), class: "mr-1" %>
+        <%= form.radio_button :filter_price_max, 'true', onchange: 'this.form.submit()', class: "form-radio h-3 w-3 text-black border-gray-300" %>
+      </div>
+    </div>
+  <% end %>
+</div>

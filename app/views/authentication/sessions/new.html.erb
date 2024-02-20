@@ -1,0 +1,32 @@
+<div class="flex h-screen">
+  <div class="w-1/2 flex justify-center items-center">
+    <img class="h-96" src="https://www.nazcar-rentacar.com/wp-content/uploads/2021/11/sparkgti.png" alt="Carro chevrolet spark">
+  </div>
+  <div class="w-1/2 flex justify-center items-center">
+    <%= form_with(url: sessions_path) do |form| %>
+      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-3/4" method="post">
+        <% if alert %>
+          <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-2" role="alert">
+            <strong class="font-bold">Error!</strong>
+            <span class="block sm:inline"><%= alert %></span>
+          </div>
+        <% end %>
+
+        <div class="mb-4">
+          <%= form.label :login, class: "block text-gray-700 font-bold mb-2" %>
+          <%= form.text_field :login, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", required: true %>
+        </div>
+
+        <div class="mb-4">
+          <%= form.label :password, class: "block text-gray-700 font-bold mb-2" %>
+          <%= form.password_field :password, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", required: true %>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <%= form.submit "Iniciar sesión", class: "bg-black hover:bg-gray-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" %>
+          <%= link_to '¿Olvidaste tu contraseña?', password_reset_path, class: 'inline-block align-baseline font-bold text-sm text-black hover:text-gray-900' %>
+        </div>
+      </form>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<tr>
+  <td class="py-2 px-4 border-b"><%= reservation_row.car_id %></td>
+  <td class="py-2 px-4 border-b"><%= reservation_row.user_id %></td>
+  <td class="py-2 px-4 border-b">
+    <% user = User.find_by(id: reservation_row.user_id) %>
+    <%= user.name if user %>
+  </td>
+  <td class="py-2 px-4 border-b"><%= reservation_row.pickup_date %></td>
+  <td class="py-2 px-4 border-b"><%= reservation_row.return_date %></td>
+  <td class="py-2 px-4 border-b"><%= reservation_row.total_price %></td>
+  <% if Current.user&.admin %>
+    <td class="py-2 px-4 border-b">
+      <%= link_to "Eliminar", reservation_path(reservation_row), 
+        data: { 
+          turbo_method: :delete,
+          turbo_confirm: "¿Estás seguro de que deseas eliminar esta reserva?",
+          confirm_class: "bg-red-600 text-white py-1 px-2 rounded font-semibold shadow-md hover:shadow-lg hover:bg-red-700" 
+        }, 
+        class: "bg-zinc-800 text-white py-1 px-2 rounded-full font-bold hover:bg-red-600"
+      %>
+    </td>
+  <% end %>
+</tr>

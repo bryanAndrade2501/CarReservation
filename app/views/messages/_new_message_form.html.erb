@@ -1,0 +1,6 @@
+<div class="flex items-end justify-center w-full">
+  <%= form_with(model: [@single_room, @message], remote: true, class: 'flex') do |form| %>
+    <%= form.text_field :body, id: 'chat-text', class: 'border border-gray-300 rounded-lg p-2 mr-2 w-full', required: true %>
+    <%= form.submit 'Enviar', class: 'bg-blue-500 text-white px-4 py-2 rounded-lg' %>
+  <% end %>
+</div>

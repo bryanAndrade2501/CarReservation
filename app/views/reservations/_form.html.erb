@@ -1,0 +1,24 @@
+<%= form_with model: @reservation do |form| %>
+    <div class="mb-4">
+        <% @reservation.errors.full_messages.each do |error| %>
+            <div class="text-red-500"><%= error %></div>
+        <% end %>
+    </div>
+    
+    <div class="mb-4">
+        <%= form.label :pickup_date, class: 'block font-semibold' %>
+        <%= form.date_field :pickup_date, class: 'border rounded p-2' %>
+    </div>
+    
+    <div class="mb-4">
+        <%= form.label :return_date, class: 'block font-semibold' %>
+        <%= form.date_field :return_date, class: 'border rounded p-2' %>
+    </div>
+
+    <%= form.hidden_field :status, value: 'Pendiente' %>
+    <%= form.hidden_field :user_id, value: Current.user.id %>
+    <%= form.hidden_field :car_id, value: @car.id %>
+    <%= form.hidden_field :total_price, value: 52.00 %>
+    
+    <%= form.submit "Guardar", class: 'bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800' %>
+<% end %>

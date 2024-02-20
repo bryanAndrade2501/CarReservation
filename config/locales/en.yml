@@ -1,0 +1,108 @@
+en:
+  authentication:
+    sessions:
+      create:
+        success: "Welcome"
+      destroy:
+        destroyed: "Session has been closed successfully"
+  activerecord:
+    models:
+      car: "Car"
+    attributes:
+      car:
+        modelo: "Model"
+        marca: "Brand"
+        capacidad: "Capacity"
+        transmision: "Transmission"
+        preciodiario: "Price per day"
+        anio: "Year"
+        images: "Images"
+        type: "Car type"
+      type:
+        name: "Tipo de auto"
+    errors:
+      messages:
+        invalid: "Invalid username or password"
+      models:
+        car:
+          attributes:
+            modelo:
+              blank: "Model can't be blank"
+            marca:
+              blank: "Brand can't be blank"
+            capacidad:
+              blank: "Capacity can't be blank"
+            transmision:
+              blank: "Transmission can't be blank"
+            preciodiario:
+              blank: "Price per day can't be blank"
+            anio:
+              blank: "Year can't be blank"
+            type:
+              blank: "Car type can't be blank"
+        type:
+          attributes:
+            name:
+            blank: "Name can't be blank"
+        user:
+          invalid: "Invalid username or password"
+          too_long: "Username is too long (maximum is 15 characters)"
+          attributes:
+            email:
+              blank: "Email can't be blank"
+              taken: "Email has already been taken"
+            password:
+              blank: "Password can't be blank"
+              too_short: "Password is too short (minimum is 6 characters)"
+            username:
+              blank: "Username can't be blank"
+              taken: "Username has already been taken"
+              too_short: "Username is too short (minimum is 6 characters)"
+              too_long: "Username is too long (maximum is 15 characters)"
+              invalid: "Username is invalid"
+            name:
+              blank: "Name can't be blank"
+  common:
+    confirm: "Are you sure?"
+  cars:
+    edit:
+      title: "Edit car"
+    new:
+      title: "New car"
+    index:
+      title: "Cars"
+      all: "All"
+      min_value: "Minimum value"
+      max_value: "Maximum value"
+      submit: "Filter"
+    create:
+      created: "Car created successfully"
+    update:
+      updated: "Car updated successfully"
+    destroy:
+      destroyed: "Car destroyed successfully"
+      error: "Car could not be destroyed"
+    filter_html:
+      max_value: "Maximum value"
+      min_value: "Minimum value"
+    filter:
+      max_value: "Maximum price"
+      min_value: "Minimum value"
+    order_by:
+      order: "Order by"
+      descendente: "Minor"
+      ascendente: "Major"
+  type:
+    edit:
+      title: "Edit type"
+    new:
+      title: "New type"
+    index:
+      title: "Types"
+    delete:
+      title: "Delete type"
+      confirm: "Are you sure you want to delete this type?"
+  authentication:
+    users:
+      create:
+        created: "User created successfully"

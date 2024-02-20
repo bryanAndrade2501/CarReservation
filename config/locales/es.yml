@@ -1,0 +1,113 @@
+es:
+  authentication:
+    sessions:
+      create:
+        success: "Bienvenido"
+      destroy:
+        destroyed: "Sesión cerrada correctamente"
+  activerecord:
+    models:
+      car: "Car"
+    attributes:
+      car:
+        modelo: "Modelo"
+        marca: "Marca"
+        capacidad: "Capacidad"
+        transmision: "Tipo de transmisión"
+        preciodiario: "Precio por día"
+        anio: "Año"
+        images: "Imágenes"
+        type: "Tipo de auto"
+      type:
+        nombre: "Tipo de auto"
+      user:
+        email: "Correo electrónico"
+        password_digest: "Contraseña"
+        name: "Nombre"
+        username: "Nombre de usuario"
+    errors:
+      messages:
+        invalid: "Nombre de usuario o contraseña inválidos"
+        blank: "no puede estar vacío"
+        too_short: "es demasiado corto"
+      models:
+        car:
+          attributes:
+            modelo:
+              blank: "no puede estar vacío"
+            marca:
+              blank: "no puede estar vacía"
+            capacidad:
+              blank: "no puede estar vacía"
+            transmision:
+              blank: "no puede estar vacía"
+            preciodiario:
+              blank: "no puede estar vacío"
+            anio:
+              blank: "no puede estar vacío"
+            type:
+              blank: "no puede estar vacío"
+              required: "es requerido"
+        type:
+          attributes:
+            name:
+              blank: "no puede estar vacío"
+        user:
+          attributes:
+            email:
+              blank: "es requerido"
+              taken: "ya está en uso"
+            password_digest:
+              blank: "es requerido"
+            username:
+              blank: "es requerido"
+              taken: "ya está en uso"
+              too_short: "es demasiado corto minimo 6 caracteres"
+              too_long: "es demasiado largo maximo 15 caracteres"
+              invalid: "es inválido"
+            name:
+              blank: "es requerido"
+  common:
+    confirm: "¿Estás seguro?"
+  cars:
+    edit:
+      title: "Editar coche"
+    new:
+      title: "Nuevo coche"
+    index:
+      title: "Coches"
+      all: "Todos"
+      min_value: "Valor mínimo"
+      max_value: "Valor máximo"
+      submit: "Filtrar"
+    create:
+      created: "Coche creado correctamente"
+    update:
+      updated: "Coche actualizado correctamente"
+    destroy:
+      destroyed: "Coche eliminado correctamente"
+      error: "No se ha podido eliminar el coche"
+    filter_html:
+      max_value: "Valor máximo"
+      min_value: "Valor mínimo"
+    filter:
+      max_value: "Precio máximo"
+      min_value: "Valor mínimo"
+    order_by:
+      order: "Ordenar por"
+      descendente: "Menor"
+      ascendente: "Mayor"
+  type:
+    edit:
+      title: "Editar tipo"
+    new:
+      title: "Nuevo tipo"
+    index:
+      title: "Tipos"
+    delete:
+      title: "Eliminar tipo"
+      confirm: "¿Estás seguro de que quieres eliminar este tipo?"
+  authentication:
+    users:
+      create:
+        created: "Usuario creado correctamente"

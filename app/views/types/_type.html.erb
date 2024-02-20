@@ -1,0 +1,15 @@
+<div id="<%= dom_id type %>">
+  <p>
+    <strong>Name:</strong>
+    <%= type.name %>
+  </p>
+  <p>Id: <%= type.id %></p>
+
+  <%= link_to t('type.edit.title'), edit_type_path(type) %>
+  <%= link_to t('type.delete.title'), type_path(type), data: {
+    turbo_method: :delete,
+    turbo_confirm: t('type.delete.confirm')
+  } %>
+
+
+</div>
